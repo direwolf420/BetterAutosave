@@ -1,0 +1,10 @@
+author = direwolf420
+side = NoSync
+version = 1.0
+displayName = Better Autosave
+homepage = www.google.com
+hideCode = false
+hideResources = false
+includeSource = false
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, .gitignore, Properties\*, Images\*
+includePDB = false
