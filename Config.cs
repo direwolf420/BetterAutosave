@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel;
 using System.Runtime.Serialization;
 using Terraria;
@@ -59,9 +60,11 @@ namespace BetterAutosave
 			)]
 		[Label("Autosave enabled")]
 		[Tooltip("This mod will always work if enabled on the server. In singleplayer, only if 'Autosave' is enabled in the settings.")]
+		[JsonIgnore]
 		public bool AutosaveStatus => Main.netMode != NetmodeID.MultiplayerClient || Main.autoSave;
 
 		[Label("Current Interval (hours:minutes:seconds)")]
+		[JsonIgnore]
 		public string CurrentInterval => SecondsToString(AutosaveInterval);
 
 		[OnDeserialized]
@@ -96,9 +99,11 @@ namespace BetterAutosave
 			)]
 		[Label("Autosave enabled")]
 		[Tooltip("Autosave will always work in multiplayer for the client")]
+		[JsonIgnore]
 		public bool AutosaveStatus => true;
 
 		[Label("Current Interval (hours:minutes:seconds)")]
+		[JsonIgnore]
 		public string CurrentInterval => SecondsToString(AutosaveInterval);
 
 		[OnDeserialized]
