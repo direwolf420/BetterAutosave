@@ -39,7 +39,7 @@ namespace BetterAutosave
 	{
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 
-		public const int Min = 30; //30 seconds
+		public const int Min = 10; //30 seconds
 		public const int Max = 24 * 60 * 60; //24 hours
 
 		[Tooltip("Autosave interval in seconds")]
@@ -52,6 +52,11 @@ namespace BetterAutosave
 		[Label("Disable Autosave")]
 		[DefaultValue(false)]
 		public bool AutosaveDisabled;
+
+		[Tooltip("Switch on if you want notification messages when an autosave occurs (server console or chat)")]
+		[Label("Notify Messages")]
+		[DefaultValue(false)]
+		public bool Notify;
 
 		//Header"==================================="
 		[Header("==Server+Singleplayer Config Info==" + "\n" +
@@ -79,7 +84,7 @@ namespace BetterAutosave
 	{
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 
-		public const int Min = 30; //30 seconds
+		public const int Min = 10; //30 seconds
 		public const int Max = 12 * 60 * 60; //12 hours
 
 		[Tooltip("Autosave interval in seconds")]
@@ -92,6 +97,11 @@ namespace BetterAutosave
 		[Label("Disable Autosave")]
 		[DefaultValue(false)]
 		public bool AutosaveDisabled;
+
+		[Tooltip("Switch on if you want notification messages when an autosave occurs (server console or chat)")]
+		[Label("Notify Messages")]
+		[DefaultValue(false)]
+		public bool Notify;
 
 		//Header"==================================="
 		[Header("======Multiplayer Client Info======" + "\n" +

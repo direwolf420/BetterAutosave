@@ -1,3 +1,5 @@
+using Microsoft.Xna.Framework;
+using System;
 using System.Diagnostics;
 using Terraria;
 using Terraria.ID;
@@ -25,21 +27,40 @@ namespace BetterAutosave
 			saveTime = null;
 		}
 
+		public void Print(string message)
+		{
+			Logger.Info(message);
+			if (Main.netMode == NetmodeID.Server)
+			{
+				Console.WriteLine(message);
+			}
+			else
+			{
+				Main.NewText(message, Color.LightBlue);
+			}
+		}
+
 		private void SaveServer(On.Terraria.Main.orig_UpdateTime orig)
 		{
 			orig();
 
-			if (Main.dedServ && !Config.Get<AServerConfig>().AutosaveDisabled)
+			var serverConfig = Config.Get<AServerConfig>();
+
+			if (Main.dedServ && !serverConfig.AutosaveDisabled)
 			{
 				//Only make this run on a server
 				if (!saveTime.IsRunning)
 					saveTime.Start();
 
-				int serverInterval = Config.Get<AServerConfig>().AutosaveInterval;
+				int serverInterval = serverConfig.AutosaveInterval;
 				if (saveTime.ElapsedMilliseconds > serverInterval * 1000)
 				{
 					saveTime.Reset();
-					Logger.Info("Autosaving World...");
+
+					string message = "Autosaved World";
+					if (serverConfig.Notify)
+						Print(message);
+
 					WorldGen.saveAndPlay();
 				}
 			}
@@ -47,29 +68,40 @@ namespace BetterAutosave
 
 		private void SaveClient(On.Terraria.Main.orig_DoUpdate_AutoSave orig)
 		{
-			if (!Main.gameMenu && Main.netMode == NetmodeID.MultiplayerClient && !Config.Get<BClientConfig>().AutosaveDisabled)
+			var clientConfig = Config.Get<BClientConfig>();
+			var serverConfig = Config.Get<AServerConfig>();
+
+			if (!Main.gameMenu && Main.netMode == NetmodeID.MultiplayerClient && !clientConfig.AutosaveDisabled)
 			{
 				if (!saveTime.IsRunning)
 					saveTime.Start();
 
-				int clientInterval = Config.Get<BClientConfig>().AutosaveInterval;
+				int clientInterval = clientConfig.AutosaveInterval;
 				if (saveTime.ElapsedMilliseconds > clientInterval * 1000)
 				{
 					saveTime.Reset();
-					Logger.Info("Autosaving Player...");
+
+					string message = "Autosaved Player";
+					if (clientConfig.Notify)
+						Print(message);
+
 					WorldGen.saveToonWhilePlaying();
 				}
 			}
-			else if (!Main.gameMenu && Main.autoSave && !Config.Get<AServerConfig>().AutosaveDisabled)
+			else if (!Main.gameMenu && Main.autoSave && !serverConfig.AutosaveDisabled)
 			{
 				if (!saveTime.IsRunning)
 					saveTime.Start();
 
-				int singleInterval = Config.Get<AServerConfig>().AutosaveInterval;
+				int singleInterval = serverConfig.AutosaveInterval;
 				if (saveTime.ElapsedMilliseconds > singleInterval * 1000)
 				{
 					saveTime.Reset();
-					Logger.Info("Autosaving World and Player...");
+
+					string message = "Autosaved World and Player";
+					if (serverConfig.Notify)
+						Print(message);
+
 					WorldGen.saveToonWhilePlaying();
 					WorldGen.saveAndPlay();
 				}
