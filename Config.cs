@@ -39,7 +39,7 @@ namespace BetterAutosave
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 
 		public const int Min = 30; //30 seconds
-		public const int Max = 60 * 60; //60 minutes
+		public const int Max = 24 * 60 * 60; //24 hours
 
 		[Tooltip("Autosave interval in seconds")]
 		[Label("Autosave Interval")]
@@ -72,7 +72,7 @@ namespace BetterAutosave
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 
 		public const int Min = 30; //30 seconds
-		public const int Max = 30 * 60; //30 minutes
+		public const int Max = 12 * 60 * 60; //12 hours
 
 		[Tooltip("Autosave interval in seconds")]
 		[Label("Autosave Interval")]
@@ -84,6 +84,10 @@ namespace BetterAutosave
 		[Header("======Multiplayer Client Info======" + "\n" +
 			"Will save the player only in multiplayer"
 			)]
+		[Label("Autosave enabled")]
+		[Tooltip("Autosave will always work in multiplayer for the client")]
+		public bool AutosaveStatus => true;
+
 		[Label("Current Interval (hours:minutes:seconds)")]
 		public string CurrentInterval => SecondsToString(AutosaveInterval);
 

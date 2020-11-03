@@ -1,6 +1,6 @@
 # Better Autosave
 
-![Icon](https://raw.githubusercontent.com/direwolf420/BetterAutosave/master/icon.png)
+![Icon](https://raw.githubusercontent.com/direwolf420/BetterAutosave/main/icon.png)
 
 Terraria Forum link: www.google.com
 
@@ -15,3 +15,4 @@ They let you customize the autosave interval (Default 10 minutes in singleplayer
 **Notes:**
 * Only in singleplayer: Requires the "Autosave" setting in the game settings to be turned on
 * The serversided world saving once an ingame day will still happen regardless
+* Minimum interval is 30 seconds for stability reasons

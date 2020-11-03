@@ -10,3 +10,4 @@ Read the homepage for more info.
 Notes:
 * Only in singleplayer: Requires the "Autosave" setting in the game settings to be turned on
 * The serversided world saving once an ingame day will still happen regardless
+* Minimum interval is 30 seconds for stability reasons
