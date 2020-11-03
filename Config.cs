@@ -47,6 +47,11 @@ namespace BetterAutosave
 		[DefaultValue(10 * 60)] //10 minutes
 		public int AutosaveInterval;
 
+		[Tooltip("Switch on if you want to prevent autosaving entirely")]
+		[Label("Disable Autosave")]
+		[DefaultValue(false)]
+		public bool AutosaveDisabled;
+
 		//Header"==================================="
 		[Header("==Server+Singleplayer Config Info==" + "\n" +
 			"Will save the world+player in singleplayer," + "\n" +
@@ -79,6 +84,11 @@ namespace BetterAutosave
 		[Range(Min, Max)]
 		[DefaultValue(5 * 60)] //5 minutes
 		public int AutosaveInterval;
+
+		[Tooltip("Switch on if you want to prevent autosaving entirely")]
+		[Label("Disable Autosave")]
+		[DefaultValue(false)]
+		public bool AutosaveDisabled;
 
 		//Header"==================================="
 		[Header("======Multiplayer Client Info======" + "\n" +

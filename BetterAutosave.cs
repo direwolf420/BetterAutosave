@@ -1,18 +1,18 @@
-using Microsoft.Xna.Framework;
 using System.Diagnostics;
 using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace BetterAutosave
 {
 	public class BetterAutosaveMod : Mod
 	{
-		internal static Stopwatch saveTime = new Stopwatch();
+		internal static Stopwatch saveTime;
 
 		public override void Load()
 		{
+			saveTime = new Stopwatch();
+
 			//Runs when !dedServ
 			On.Terraria.Main.DoUpdate_AutoSave += SaveClient;
 
@@ -20,11 +20,16 @@ namespace BetterAutosave
 			On.Terraria.Main.UpdateTime += SaveServer;
 		}
 
+		public override void Unload()
+		{
+			saveTime = null;
+		}
+
 		private void SaveServer(On.Terraria.Main.orig_UpdateTime orig)
 		{
 			orig();
 
-			if (Main.dedServ)
+			if (Main.dedServ && !Config.Get<AServerConfig>().AutosaveDisabled)
 			{
 				//Only make this run on a server
 				if (!saveTime.IsRunning)
@@ -42,12 +47,12 @@ namespace BetterAutosave
 
 		private void SaveClient(On.Terraria.Main.orig_DoUpdate_AutoSave orig)
 		{
-			if (!Main.gameMenu && Main.netMode == NetmodeID.MultiplayerClient)
+			if (!Main.gameMenu && Main.netMode == NetmodeID.MultiplayerClient && !Config.Get<BClientConfig>().AutosaveDisabled)
 			{
 				if (!saveTime.IsRunning)
 					saveTime.Start();
 
-				int clientInterval = Config.Get<BClientConfig>().AutosaveInterval / 2;
+				int clientInterval = Config.Get<BClientConfig>().AutosaveInterval;
 				if (saveTime.ElapsedMilliseconds > clientInterval * 1000)
 				{
 					saveTime.Reset();
@@ -55,7 +60,7 @@ namespace BetterAutosave
 					WorldGen.saveToonWhilePlaying();
 				}
 			}
-			else if (!Main.gameMenu && Main.autoSave)
+			else if (!Main.gameMenu && Main.autoSave && !Config.Get<AServerConfig>().AutosaveDisabled)
 			{
 				if (!saveTime.IsRunning)
 					saveTime.Start();
@@ -74,44 +79,5 @@ namespace BetterAutosave
 				saveTime.Stop();
 			}
 		}
-
-		public override void Unload()
-		{
-			base.Unload();
-		}
-
-		//Original code
-		/*
-		private static void DoUpdate_AutoSave()
-		{
-			if (!gameMenu && netMode == 1)
-			{
-				if (!saveTime.IsRunning)
-					saveTime.Start();
-
-				if (saveTime.ElapsedMilliseconds > 300000)
-				{
-					saveTime.Reset();
-					WorldGen.saveToonWhilePlaying();
-				}
-			}
-			else if (!gameMenu && autoSave)
-			{
-				if (!saveTime.IsRunning)
-					saveTime.Start();
-
-				if (saveTime.ElapsedMilliseconds > 600000)
-				{
-					saveTime.Reset();
-					WorldGen.saveToonWhilePlaying();
-					WorldGen.saveAndPlay();
-				}
-			}
-			else if (saveTime.IsRunning)
-			{
-				saveTime.Stop();
-			}
-		}
-		*/
 	}
 }
