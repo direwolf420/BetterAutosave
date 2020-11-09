@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/direwolf420/BetterAutosave/main/icon.png)
 
-Terraria Forum link: www.google.com
+Terraria Forum link: https://forums.terraria.org/index.php?threads/better-autosave.99817/
 
 Customize the autosave interval in both single and/or multiplayer!
 
