@@ -88,7 +88,7 @@ namespace BetterAutosave
 					WorldGen.saveToonWhilePlaying();
 				}
 			}
-			else if (!Main.gameMenu && Main.autoSave && !serverConfig.AutosaveDisabled)
+			else if (Main.hasFocus && !Main.gameMenu && Main.autoSave && !serverConfig.AutosaveDisabled)
 			{
 				if (!saveTime.IsRunning)
 					saveTime.Start();
