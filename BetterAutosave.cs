@@ -20,6 +20,7 @@ namespace BetterAutosave
 
 			//Runs always
 			On.Terraria.Main.UpdateTime += SaveServer;
+			//Can also use ModSystem.PostUpdateTime hook
 		}
 
 		public override void Unload()

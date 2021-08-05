@@ -1,26 +1,22 @@
 {
-  "profiles": {
-    "Terraria": {
-      "commandName": "Executable",
-      "executablePath": "$(tMLPath)",
-      "workingDirectory": "$(TerrariaSteamPath)"
-    },
-    "TerrariaFast": {
-      "commandName": "Executable",
-      "executablePath": "$(tMLPath)",
-      "commandLineArgs": "-skipselect",
-      "workingDirectory": "$(TerrariaSteamPath)"
-    },
-    "DebugFast": {
-      "commandName": "Executable",
-      "executablePath": "E:\\Steam\\SteamApps\\common\\Terraria\\tModLoaderDebug.exe",
-      "commandLineArgs": "-skipselect",
-      "workingDirectory": "$(TerrariaSteamPath)"
-    },
-    "TerrariaServer": {
-      "commandName": "Executable",
-      "executablePath": "$(tMLServerPath)",
-      "workingDirectory": "$(TerrariaSteamPath)"
+    "profiles": {
+        "Terraria": {
+            "commandName": "Executable",
+            "executablePath": "dotnet",
+            "commandLineArgs": "$(tMLPath)",
+            "workingDirectory": "$(TerrariaSteamPath)"
+        },
+        "TerrariaFast": {
+            "commandName": "Executable",
+            "executablePath": "dotnet",
+            "commandLineArgs": "$(tMLPath) -skipselect",
+            "workingDirectory": "$(TerrariaSteamPath)"
+        },
+        "TerrariaServer": {
+            "commandName": "Executable",
+            "executablePath": "dotnet",
+            "commandLineArgs": "$(tMLServerPath)",
+            "workingDirectory": "$(TerrariaSteamPath)"
+        }
     }
-  }
 }
