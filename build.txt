@@ -1,6 +1,6 @@
 author = direwolf420
 side = NoSync
-version = 1.2
+version = 1.2.0.1
 displayName = Better Autosave
 homepage = https://forums.terraria.org/index.php?threads/better-autosave.99817/
 hideCode = false
