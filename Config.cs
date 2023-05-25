@@ -27,49 +27,38 @@ namespace BetterAutosave
 
 		public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message)
 		{
-			message = "Only the host of this world can change the config! Do so in singleplayer.";
+			message = BetterAutosaveMod.AcceptClientChangesText.ToString();
 			//Because of NoSync
 			return false;
 		}
 	}
 
 	//This config should be the first shown, so it should start earlier in the alphabet compared to the other one
-	[Label("Server+Singleplayer Config")]
 	public class AServerConfig : Config
 	{
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 
-		public const int Min = 10; //30 seconds
+		public const int Min = 10; //10 seconds
 		public const int Max = 24 * 60 * 60; //24 hours
 
-		[Tooltip("Autosave interval in seconds")]
-		[Label("Autosave Interval")]
 		[Range(Min, Max)]
 		[DefaultValue(10 * 60)] //10 minutes
 		public int AutosaveInterval;
 
-		[Tooltip("Switch on if you want to prevent autosaving entirely")]
-		[Label("Disable Autosave")]
 		[DefaultValue(false)]
 		public bool AutosaveDisabled;
 
-		[Tooltip("Switch on if you want notification messages when an autosave occurs (server console or chat)")]
-		[Label("Notify Messages")]
 		[DefaultValue(false)]
 		public bool Notify;
 
-		//Header"==================================="
-		[Header("==Server+Singleplayer Config Info==" + "\n" +
-			"Will save the world+player in singleplayer," + "\n" +
-			"and only the world in multiplayer"
-			)]
-		[Label("Autosave enabled")]
-		[Tooltip("This mod will always work if enabled on the server. In singleplayer, only if 'Autosave' is enabled in the settings.")]
+		[Header("ServerSingleplayerConfigInfo")]
+
 		[JsonIgnore]
+		[ShowDespiteJsonIgnore]
 		public bool AutosaveStatus => Main.netMode != NetmodeID.MultiplayerClient || Main.autoSave;
 
-		[Label("Current Interval (hours:minutes:seconds)")]
 		[JsonIgnore]
+		[ShowDespiteJsonIgnore]
 		public string CurrentInterval => SecondsToString(AutosaveInterval);
 
 		[OnDeserialized]
@@ -79,41 +68,31 @@ namespace BetterAutosave
 		}
 	}
 
-	[Label("Multiplayer Client Config")]
 	public class BClientConfig : Config
 	{
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 
-		public const int Min = 10; //30 seconds
+		public const int Min = 10; //10 seconds
 		public const int Max = 12 * 60 * 60; //12 hours
 
-		[Tooltip("Autosave interval in seconds")]
-		[Label("Autosave Interval")]
 		[Range(Min, Max)]
 		[DefaultValue(5 * 60)] //5 minutes
 		public int AutosaveInterval;
 
-		[Tooltip("Switch on if you want to prevent autosaving entirely")]
-		[Label("Disable Autosave")]
 		[DefaultValue(false)]
 		public bool AutosaveDisabled;
 
-		[Tooltip("Switch on if you want notification messages when an autosave occurs (server console or chat)")]
-		[Label("Notify Messages")]
 		[DefaultValue(false)]
 		public bool Notify;
 
-		//Header"==================================="
-		[Header("======Multiplayer Client Info======" + "\n" +
-			"Will save the player only in multiplayer"
-			)]
-		[Label("Autosave enabled")]
-		[Tooltip("Autosave will always work in multiplayer for the client")]
+		[Header("MultiplayerClientConfigInfo")]
+
 		[JsonIgnore]
+		[ShowDespiteJsonIgnore]
 		public bool AutosaveStatus => true;
 
-		[Label("Current Interval (hours:minutes:seconds)")]
 		[JsonIgnore]
+		[ShowDespiteJsonIgnore]
 		public string CurrentInterval => SecondsToString(AutosaveInterval);
 
 		[OnDeserialized]

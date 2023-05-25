@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace BetterAutosave
@@ -11,16 +12,29 @@ namespace BetterAutosave
 	{
 		internal static Stopwatch saveTime;
 
+		public static LocalizedText AcceptClientChangesText { get; private set; }
+		public static LocalizedText AutosavedWorldText { get; private set; }
+		public static LocalizedText AutosavedPlayerText { get; private set; }
+		public static LocalizedText AutosavedWorldPlayerText { get; private set; }
+
 		public override void Load()
 		{
 			saveTime = new Stopwatch();
 
 			//Runs when !dedServ
-			On.Terraria.Main.DoUpdate_AutoSave += SaveClient;
+			On_Main.DoUpdate_AutoSave += SaveClient;
 
 			//Runs always
-			On.Terraria.Main.UpdateTime += SaveServer;
+			On_Main.UpdateTime += SaveServer;
 			//Can also use ModSystem.PostUpdateTime hook
+
+			string category = $"Configs.Common.";
+			AcceptClientChangesText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AcceptClientChanges"));
+
+			category = $"Common.";
+			AutosavedWorldText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AutosavedWorld"));
+			AutosavedPlayerText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AutosavedPlayer"));
+			AutosavedWorldPlayerText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AutosavedWorldPlayer"));
 		}
 
 		public override void Unload()
@@ -41,7 +55,7 @@ namespace BetterAutosave
 			}
 		}
 
-		private void SaveServer(On.Terraria.Main.orig_UpdateTime orig)
+		private void SaveServer(On_Main.orig_UpdateTime orig)
 		{
 			orig();
 
@@ -58,7 +72,7 @@ namespace BetterAutosave
 				{
 					saveTime.Reset();
 
-					string message = "Autosaved World";
+					string message = AutosavedWorldText.ToString();
 					if (serverConfig.Notify)
 						Print(message);
 
@@ -67,7 +81,7 @@ namespace BetterAutosave
 			}
 		}
 
-		private void SaveClient(On.Terraria.Main.orig_DoUpdate_AutoSave orig)
+		private void SaveClient(On_Main.orig_DoUpdate_AutoSave orig)
 		{
 			var clientConfig = Config.Get<BClientConfig>();
 			var serverConfig = Config.Get<AServerConfig>();
@@ -82,7 +96,7 @@ namespace BetterAutosave
 				{
 					saveTime.Reset();
 
-					string message = "Autosaved Player";
+					string message = AutosavedPlayerText.ToString();
 					if (clientConfig.Notify)
 						Print(message);
 
@@ -99,7 +113,7 @@ namespace BetterAutosave
 				{
 					saveTime.Reset();
 
-					string message = "Autosaved World and Player";
+					string message = AutosavedWorldPlayerText.ToString();
 					if (serverConfig.Notify)
 						Print(message);
 

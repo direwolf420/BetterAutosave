@@ -1,17 +1,18 @@
 Better Autosave - Customize the autosave interval in both single and/or multiplayer!
 
-This mod can be installed on both servers and clients independently, comes with two configs:
+[b]This mod can be installed on both servers and clients independently, comes with two configs:[/b]
 * Server + Singleplayer
 * Multiplayer Client
 They let you customize the autosave interval (Default 10 minutes in singleplayer for world+player, and 5 minutes for player on the client) and also specify one for the server's world! (Vanilla only autosaves once an ingame day)
 
 Read the homepage for more info.
-
-Notes:
+[hr][/hr]
+[b]Notes:[/b]
 * Only in singleplayer: Requires the "Autosave" setting in the game settings to be turned on
 * The serversided world saving once an ingame day will still happen regardless
 * Minimum interval is 10 seconds for stability reasons
-
-Localization:If you want to add support for different languages, you are welcome to contribute localizations here: https://github.com/direwolf420/BetterAutosave
+[hr][/hr]
+[b]Localization:[/b]
+If you want to add support for different languages, you are welcome to contribute localizations here: [b][url=https://github.com/direwolf420/BetterAutosave]GitHub[/url][/b]
 List of localization contributors:
 * None!
