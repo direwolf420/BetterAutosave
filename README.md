@@ -1,6 +1,6 @@
 # Better Autosave
 
-![Icon](https://raw.githubusercontent.com/direwolf420/BetterAutosave/main/icon.png)
+![Icon](https://raw.githubusercontent.com/direwolf420/BetterAutosave/1.4/icon.png)
 
 Terraria Forum link: https://forums.terraria.org/index.php?threads/better-autosave.99817/
 
