@@ -12,6 +12,6 @@ Notes:
 * The serversided world saving once an ingame day will still happen regardless
 * Minimum interval is 10 seconds for stability reasons
 
-Localization:If you want to add support for different languages, you are welcome to contribute localizations here: https://github.com/direwolf420/BetterAutosave
+Localization: If you want to add support for different languages, you are welcome to contribute localizations here: https://github.com/direwolf420/BetterAutosave
 List of localization contributors:
 * None!
