@@ -7,4 +7,3 @@ hideCode = false
 hideResources = false
 includeSource = false
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, .gitignore, Properties\*, Images\*
-includePDB = false
