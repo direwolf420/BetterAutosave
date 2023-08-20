@@ -2,83 +2,83 @@ Mods: {
 	BetterAutosave: {
 		Configs: {
 			AServerConfig: {
-				// DisplayName: Server+Singleplayer Config
+				DisplayName: Настройки сервера и одиночной игры
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: Интервал автосохранений
+					Tooltip: Интервал в секундах между автоматическими сохранениями
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: Отмена автосохранений
+					Tooltip: Включение полностью предотвратит автоматические сохранения
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: Уведомления о сохранении
+					Tooltip: Сообщать об автоматическом сохранении путём уведомления в чате или консоли сервера
 				}
 
-				/* Headers.ServerSingleplayerConfigInfo:
+				Headers.ServerSingleplayerConfigInfo:
 					'''
-					==Server+Singleplayer Config Info==
-					Will save the world+player in singleplayer,
-					and only the world in multiplayer
-					''' */
+					== Настройки сервера и одиночной игры ==
+					• Сохранит и мир, и игрока в одиночной игре
+					• Сохранит только мир в многопользовательской игре
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: This mod will always work if enabled on the server. In singleplayer, only if 'Autosave' is enabled in the settings.
+					Label: Автосохранение
+					Tooltip: Эта модификация всегда активна для серверов. В одиночной игре - только если "Отмена автосохранений" отключена
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: Текущий интервал (часы:минуты:секунды)
+					Tooltip: ""
 				}
 			}
 
 			BClientConfig: {
-				// DisplayName: Multiplayer Client Config
+				DisplayName: Настройки многопользовательской игры
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: Интервал автосохранений
+					Tooltip: Интервал в секундах между автоматическими сохранениями
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: Отмена автосохранений
+					Tooltip: Включение полностью предотвратит автоматические сохранения
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: Уведомления о сохранении
+					Tooltip: Сообщать об автоматическим сохранении путём уведомления в чате или консоли сервера
 				}
 
-				/* Headers.MultiplayerClientConfigInfo:
+				Headers.MultiplayerClientConfigInfo:
 					'''
-					==Multiplayer Client Config Info==
-					Will save the player only in multiplayer
-					''' */
+					== Настройки клиента в многопользовательской игре ==
+					• Сохранит игрока на сервере (только при многопользовательской игре)
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: Autosave will always work in multiplayer for the client
+					Label: Автосохранения включены
+					Tooltip: Автоматические сохранения клиента всегда включены в многопользовательской игре
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: Текущий интервал (часы:минуты:секунды)
+					Tooltip: ""
 				}
 			}
 
-			// Common.AcceptClientChanges: Only the host of this world can change the config! Do so in singleplayer.
+			Common.AcceptClientChanges: Только владелец этого мира может менять настройки! Смените настройки в одиночной игре.
 		}
 
 		Common: {
-			// AutosavedWorld: Autosaved World
-			// AutosavedPlayer: Autosaved Player
-			// AutosavedWorldPlayer: Autosaved World and Player
+			AutosavedWorld: Автоматическое сохранение: Мир сохранён
+			AutosavedPlayer: Автоматическое сохранение: Игрок сохранён
+			AutosavedWorldPlayer: Автоматическое сохранение: Игрок и мир сохранены
 		}
 	}
 }
