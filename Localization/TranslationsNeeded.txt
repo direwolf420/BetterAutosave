@@ -3,7 +3,7 @@ de-DE, 0/26, 0%, missing 26
 it-IT, 0/26, 0%, missing 26
 fr-FR, 0/26, 0%, missing 26
 es-ES, 0/26, 0%, missing 26
-ru-RU, 0/26, 0%, missing 26
+ru-RU, 26/26, 100%, missing 0
 zh-Hans, 0/26, 0%, missing 26
 pt-BR, 0/26, 0%, missing 26
 pl-PL, 0/26, 0%, missing 26

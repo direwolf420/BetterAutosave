@@ -15,4 +15,4 @@ Read the homepage for more info.
 [b]Localization:[/b]
 If you want to add support for different languages, you are welcome to contribute localizations here: [b][url=https://github.com/direwolf420/BetterAutosave]GitHub[/url][/b]
 List of localization contributors:
-* None!
+* Russian: [b]GodHybrid[/b]
