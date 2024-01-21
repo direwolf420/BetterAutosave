@@ -2,83 +2,83 @@ Mods: {
 	BetterAutosave: {
 		Configs: {
 			AServerConfig: {
-				// DisplayName: Server+Singleplayer Config
+				DisplayName: Configurazione server+giocatore singolo
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: Intervallo salvataggio automatico
+					Tooltip: Intervallo salvataggio automatico in secondi
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: Disattiva salvataggio automatico
+					Tooltip: Attiva se vuoi completamente disabilitare il salvataggio automatico
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: Messaggio notifica
+					Tooltip: Attiva se vuoi un messaggio di notifica quando c'è un salvataggio automatico (console del server o chat)
 				}
 
-				/* Headers.ServerSingleplayerConfigInfo:
+				Headers.ServerSingleplayerConfigInfo:
 					'''
-					==Server+Singleplayer Config Info==
-					Will save the world+player in singleplayer,
-					and only the world in multiplayer
-					''' */
+					==Informazioni configurazione server+giocatore singolo==
+					Salverà il mondo+giocatore in giocatore singolo,
+					e solo il mondo in multigiocatore
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: This mod will always work if enabled on the server. In singleplayer, only if 'Autosave' is enabled in the settings.
+					Label: Salvataggio automatico attivo
+					Tooltip: Questa mod funzionerà sempre se attiva in un server. In giocatore singolo, solo se 'Salvataggio automatico' è attivo nelle impostazioni.
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: Intervallo tempo corrente (ore:minuti:secondi)
+					Tooltip: ""
 				}
 			}
 
 			BClientConfig: {
-				// DisplayName: Multiplayer Client Config
+				DisplayName: Configurazione client multigiocatore
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: Intervallo salvataggio automatico
+					Tooltip: Intervallo salvataggio automatico in secondi
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: Disattiva salvataggio automatico
+					Tooltip: Attiva se vuoi completamente disabilitare il salvataggio automatico
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: Messaggio notifica
+					Tooltip: Attiva se vuoi un messaggio di notifica quando c'è un salvataggio automatico (console del server o chat)
 				}
 
-				/* Headers.MultiplayerClientConfigInfo:
+				Headers.MultiplayerClientConfigInfo:
 					'''
-					==Multiplayer Client Config Info==
-					Will save the player only in multiplayer
-					''' */
+					==Informazioni configurazione client multigiocatore==
+					Salverà il personaggio solo in multigiocatore
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: Autosave will always work in multiplayer for the client
+					Label: Salvataggio automatico attivo
+					Tooltip: Il salvataggio automatico funzionerà sempre in multigiocatore per il client
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: Intervallo tempo corrente (ore:minuti:secondi)
+					Tooltip: ""
 				}
 			}
 
-			// Common.AcceptClientChanges: Only the host of this world can change the config! Do so in singleplayer.
+			Common.AcceptClientChanges: Solo il proprietario del mondo può cambiare la configurazione! Fallo in giocatore singolo.
 		}
 
 		Common: {
-			// AutosavedWorld: Autosaved World
-			// AutosavedPlayer: Autosaved Player
-			// AutosavedWorldPlayer: Autosaved World and Player
+			AutosavedWorld: Mondo salvato automaticamente
+			AutosavedPlayer: Personaggio salvato automaticamente
+			AutosavedWorldPlayer: Mondo e personaggio salvato automaticamente
 		}
 	}
 }
