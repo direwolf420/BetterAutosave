@@ -71,8 +71,6 @@ Mods: {
 					Tooltip: ""
 				}
 			}
-
-			Common.AcceptClientChanges: Only the host of this world can change the config! Do so in singleplayer.
 		}
 
 		Common: {

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.Serialization;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 
@@ -25,9 +26,9 @@ namespace BetterAutosave
 			return new TimeSpan(TimeSpan.TicksPerSecond * seconds).ToString(@"hh\:mm\:ss");
 		}
 
-		public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message)
+		public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref NetworkText message)
 		{
-			message = BetterAutosaveMod.AcceptClientChangesText.ToString();
+			message = NetworkText.FromKey("tModLoader.ModConfigRejectChangesNotHost");
 			//Because of NoSync
 			return false;
 		}

@@ -16,3 +16,4 @@ Read the homepage for more info.
 If you want to add support for different languages, you are welcome to contribute localizations here: [b][url=https://github.com/direwolf420/BetterAutosave]GitHub[/url][/b]
 List of localization contributors:
 * Russian: [b]GodHybrid[/b]
+* Italian: [b]Sea Noodle[/b]

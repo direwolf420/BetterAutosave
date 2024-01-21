@@ -12,7 +12,6 @@ namespace BetterAutosave
 	{
 		internal static Stopwatch saveTime;
 
-		public static LocalizedText AcceptClientChangesText { get; private set; }
 		public static LocalizedText AutosavedWorldText { get; private set; }
 		public static LocalizedText AutosavedPlayerText { get; private set; }
 		public static LocalizedText AutosavedWorldPlayerText { get; private set; }
@@ -28,10 +27,7 @@ namespace BetterAutosave
 			On_Main.UpdateTime += SaveServer;
 			//Can also use ModSystem.PostUpdateTime hook
 
-			string category = $"Configs.Common.";
-			AcceptClientChangesText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AcceptClientChanges"));
-
-			category = $"Common.";
+			string category = $"Common.";
 			AutosavedWorldText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AutosavedWorld"));
 			AutosavedPlayerText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AutosavedPlayer"));
 			AutosavedWorldPlayerText ??= Language.GetOrRegister(this.GetLocalizationKey($"{category}AutosavedWorldPlayer"));
