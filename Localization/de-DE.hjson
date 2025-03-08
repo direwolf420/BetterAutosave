@@ -20,11 +20,12 @@ Mods: {
                 }
 
                 Headers: {
-                    ServerSingleplayerConfigInfo: """
+                    ServerSingleplayerConfigInfo:
+                    '''
                     ==Server+Einzelspieler Konfigurationsinfo==
                     Speichert die Welt + Spieler im Einzelspielermodus,
                     und nur die Welt im Mehrspielermodus
-                    """
+                    '''
                 }
 
                 AutosaveStatus: {
@@ -57,10 +58,11 @@ Mods: {
                 }
 
                 Headers: {
-                    MultiplayerClientConfigInfo: """
+                    MultiplayerClientConfigInfo:
+                    '''
                     ==Mehrspieler Client Konfigurationsinfo==
                     Speichert nur den Spieler im Mehrspielermodus
-                    """
+                    '''
                 }
 
                 AutosaveStatus: {
