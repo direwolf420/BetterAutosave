@@ -1,82 +1,86 @@
 Mods: {
-	BetterAutosave: {
-		Configs: {
-			AServerConfig: {
-				// DisplayName: Server+Singleplayer Config
+    BetterAutosave: {
+        Configs: {
+            AServerConfig: {
+                DisplayName: Server+Einzelspieler Konfiguration
 
-				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
-				}
+                AutosaveInterval: {
+                    Label: Intervall für automatisches Speichern
+                    Tooltip: Intervall für automatisches Speichern in Sekunden
+                }
 
-				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
-				}
+                AutosaveDisabled: {
+                    Label: Automatisches Speichern deaktivieren
+                    Tooltip: Aktivieren, wenn automatisches Speichern komplett verhindert werden soll
+                }
 
-				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
-				}
+                Notify: {
+                    Label: Benachrichtigungsnachrichten
+                    Tooltip: Aktivieren, wenn Benachrichtigungen bei einem automatischen Speichern erscheinen sollen (Server-Konsole oder Chat)
+                }
 
-				/* Headers.ServerSingleplayerConfigInfo:
-					'''
-					==Server+Singleplayer Config Info==
-					Will save the world+player in singleplayer,
-					and only the world in multiplayer
-					''' */
+                Headers: {
+                    ServerSingleplayerConfigInfo:
+                    '''
+                    ==Server+Einzelspieler Konfigurationsinfo==
+                    Speichert die Welt + Spieler im Einzelspielermodus,
+                    und nur die Welt im Mehrspielermodus
+                    '''
+                }
 
-				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: This mod will always work if enabled on the server. In singleplayer, only if 'Autosave' is enabled in the settings.
-				}
+                AutosaveStatus: {
+                    Label: Automatisches Speichern aktiviert
+                    Tooltip: Dieses Mod funktioniert immer, wenn es auf dem Server aktiviert ist. Im Einzelspieler nur, wenn 'Automatisches Speichern' in den Einstellungen aktiviert ist.
+                }
 
-				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
-				}
-			}
+                CurrentInterval: {
+                    Label: Aktuelles Intervall (Stunden:Minuten:Sekunden)
+                    Tooltip: 
+                }
+            }
 
-			BClientConfig: {
-				// DisplayName: Multiplayer Client Config
+            BClientConfig: {
+                DisplayName: Mehrspieler Client-Konfiguration
 
-				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
-				}
+                AutosaveInterval: {
+                    Label: Intervall für automatisches Speichern
+                    Tooltip: Intervall für automatisches Speichern in Sekunden
+                }
 
-				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
-				}
+                AutosaveDisabled: {
+                    Label: Automatisches Speichern deaktivieren
+                    Tooltip: Aktivieren, wenn automatisches Speichern komplett verhindert werden soll
+                }
 
-				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
-				}
+                Notify: {
+                    Label: Benachrichtigungsnachrichten
+                    Tooltip: Aktivieren, wenn Benachrichtigungen bei einem automatischen Speichern erscheinen sollen (Server-Konsole oder Chat)
+                }
 
-				/* Headers.MultiplayerClientConfigInfo:
-					'''
-					==Multiplayer Client Config Info==
-					Will save the player only in multiplayer
-					''' */
+                Headers: {
+                    MultiplayerClientConfigInfo:
+                    '''
+                    ==Mehrspieler Client Konfigurationsinfo==
+                    Speichert nur den Spieler im Mehrspielermodus
+                    '''
+                }
 
-				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: Autosave will always work in multiplayer for the client
-				}
+                AutosaveStatus: {
+                    Label: Automatisches Speichern aktiviert
+                    Tooltip: Automatisches Speichern funktioniert im Mehrspielermodus immer für den Client
+                }
 
-				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
-				}
-			}
-		}
+                CurrentInterval: {
+                    Label: Aktuelles Intervall (Stunden:Minuten:Sekunden)
+                    Tooltip: 
+                }
+            }
+        }
 
-		Common: {
-			// AutosavedWorld: Autosaved World
-			// AutosavedPlayer: Autosaved Player
-			// AutosavedWorldPlayer: Autosaved World and Player
-		}
-	}
+        Common: {
+            AutosavedWorld: Welt automatisch gespeichert
+            AutosavedPlayer: Spieler automatisch gespeichert
+            AutosavedWorldPlayer: Welt und Spieler automatisch gespeichert
+        }
+    }
 }
