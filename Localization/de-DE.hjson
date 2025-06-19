@@ -1,86 +1,82 @@
 Mods: {
-    BetterAutosave: {
-        Configs: {
-            AServerConfig: {
-                DisplayName: Server+Einzelspieler Konfiguration
+	BetterAutosave: {
+		Configs: {
+			AServerConfig: {
+				DisplayName: Server+Einzelspieler Konfiguration
 
-                AutosaveInterval: {
-                    Label: Intervall für automatisches Speichern
-                    Tooltip: Intervall für automatisches Speichern in Sekunden
-                }
+				AutosaveInterval: {
+					Label: Intervall für automatisches Speichern
+					Tooltip: Intervall für automatisches Speichern in Sekunden
+				}
 
-                AutosaveDisabled: {
-                    Label: Automatisches Speichern deaktivieren
-                    Tooltip: Aktivieren, wenn automatisches Speichern komplett verhindert werden soll
-                }
+				AutosaveDisabled: {
+					Label: Automatisches Speichern deaktivieren
+					Tooltip: Aktivieren, wenn automatisches Speichern komplett verhindert werden soll
+				}
 
-                Notify: {
-                    Label: Benachrichtigungsnachrichten
-                    Tooltip: Aktivieren, wenn Benachrichtigungen bei einem automatischen Speichern erscheinen sollen (Server-Konsole oder Chat)
-                }
+				Notify: {
+					Label: Benachrichtigungsnachrichten
+					Tooltip: Aktivieren, wenn Benachrichtigungen bei einem automatischen Speichern erscheinen sollen (Server-Konsole oder Chat)
+				}
 
-                Headers: {
-                    ServerSingleplayerConfigInfo:
-                    '''
-                    ==Server+Einzelspieler Konfigurationsinfo==
-                    Speichert die Welt + Spieler im Einzelspielermodus,
-                    und nur die Welt im Mehrspielermodus
-                    '''
-                }
+				Headers.ServerSingleplayerConfigInfo:
+					'''
+					==Server+Einzelspieler Konfigurationsinfo==
+					Speichert die Welt + Spieler im Einzelspielermodus,
+					und nur die Welt im Mehrspielermodus
+					'''
 
-                AutosaveStatus: {
-                    Label: Automatisches Speichern aktiviert
-                    Tooltip: Dieses Mod funktioniert immer, wenn es auf dem Server aktiviert ist. Im Einzelspieler nur, wenn 'Automatisches Speichern' in den Einstellungen aktiviert ist.
-                }
+				AutosaveStatus: {
+					Label: Automatisches Speichern aktiviert
+					Tooltip: Diese Mod funktioniert immer, wenn es auf dem Server aktiviert ist. Im Einzelspieler nur, wenn 'Automatisches Speichern' in den Einstellungen aktiviert ist.
+				}
 
-                CurrentInterval: {
-                    Label: Aktuelles Intervall (Stunden:Minuten:Sekunden)
-                    Tooltip: 
-                }
-            }
+				CurrentInterval: {
+					Label: Aktuelles Intervall (Stunden:Minuten:Sekunden)
+					Tooltip: ""
+				}
+			}
 
-            BClientConfig: {
-                DisplayName: Mehrspieler Client-Konfiguration
+			BClientConfig: {
+				DisplayName: Mehrspieler Client-Konfiguration
 
-                AutosaveInterval: {
-                    Label: Intervall für automatisches Speichern
-                    Tooltip: Intervall für automatisches Speichern in Sekunden
-                }
+				AutosaveInterval: {
+					Label: Intervall für automatisches Speichern
+					Tooltip: Intervall für automatisches Speichern in Sekunden
+				}
 
-                AutosaveDisabled: {
-                    Label: Automatisches Speichern deaktivieren
-                    Tooltip: Aktivieren, wenn automatisches Speichern komplett verhindert werden soll
-                }
+				AutosaveDisabled: {
+					Label: Automatisches Speichern deaktivieren
+					Tooltip: Aktivieren, wenn automatisches Speichern komplett verhindert werden soll
+				}
 
-                Notify: {
-                    Label: Benachrichtigungsnachrichten
-                    Tooltip: Aktivieren, wenn Benachrichtigungen bei einem automatischen Speichern erscheinen sollen (Server-Konsole oder Chat)
-                }
+				Notify: {
+					Label: Benachrichtigungsnachrichten
+					Tooltip: Aktivieren, wenn Benachrichtigungen bei einem automatischen Speichern erscheinen sollen (Server-Konsole oder Chat)
+				}
 
-                Headers: {
-                    MultiplayerClientConfigInfo:
-                    '''
-                    ==Mehrspieler Client Konfigurationsinfo==
-                    Speichert nur den Spieler im Mehrspielermodus
-                    '''
-                }
+				Headers.MultiplayerClientConfigInfo:
+					'''
+					==Mehrspieler Client Konfigurationsinfo==
+					Speichert nur den Spieler im Mehrspielermodus
+					'''
 
-                AutosaveStatus: {
-                    Label: Automatisches Speichern aktiviert
-                    Tooltip: Automatisches Speichern funktioniert im Mehrspielermodus immer für den Client
-                }
+				AutosaveStatus: {
+					Label: Automatisches Speichern aktiviert
+					Tooltip: Automatisches Speichern funktioniert im Mehrspielermodus immer für den Client
+				}
 
-                CurrentInterval: {
-                    Label: Aktuelles Intervall (Stunden:Minuten:Sekunden)
-                    Tooltip: 
-                }
-            }
-        }
+				CurrentInterval: {
+					Label: Aktuelles Intervall (Stunden:Minuten:Sekunden)
+					Tooltip: ""
+				}
+			}
+		}
 
-        Common: {
-            AutosavedWorld: Welt automatisch gespeichert
-            AutosavedPlayer: Spieler automatisch gespeichert
-            AutosavedWorldPlayer: Welt und Spieler automatisch gespeichert
-        }
-    }
+		Common: {
+			AutosavedWorld: Welt automatisch gespeichert
+			AutosavedPlayer: Spieler automatisch gespeichert
+			AutosavedWorldPlayer: Welt und Spieler automatisch gespeichert
+		}
+	}
 }
