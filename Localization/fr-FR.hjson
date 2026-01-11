@@ -2,81 +2,81 @@ Mods: {
 	BetterAutosave: {
 		Configs: {
 			AServerConfig: {
-				// DisplayName: Server+Singleplayer Config
+				DisplayName: Configuration de Serveur+Un joueur
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: Intervalle de Sauvegarde automatique
+					Tooltip: Intervalle de Sauvegarde auto en seconde
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: Désactiver la Sauvegarde automatique
+					Tooltip: Activez si vous voulez désactiver la sauvegarde automatique
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: Message des Notifications
+					Tooltip: Activez si vous voulez recevoir un Message lors d'une sauvegarde (console de serveur ou chat)
 				}
 
-				/* Headers.ServerSingleplayerConfigInfo:
+				Headers.ServerSingleplayerConfigInfo:
 					'''
-					==Server+Singleplayer Config Info==
-					Will save the world+player in singleplayer,
-					and only the world in multiplayer
-					''' */
+					==Info de Config de Serveur+Un joueur==
+					Sauvegardera le Monde et le Joueur en mode Solo,
+					et seulement le Monde en mode Multijoueur
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: This mod will always work if enabled on the server. In singleplayer, only if 'Autosave' is enabled in the settings.
+					Label: Sauvegarde auto active
+					Tooltip: Ce mod fonctionnera toujours s'il est activé sur le Serveur. Dans solo, seulement si 'Sauvegarde auto' est active dans le Config.
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: Intervalle Actuel (heure:minutes:secondes)
+					Tooltip: ""
 				}
 			}
 
 			BClientConfig: {
-				// DisplayName: Multiplayer Client Config
+				DisplayName: Configuration du Client Multijoueur
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: Intervalle de Sauvegarde automatique
+					Tooltip: Intervalle de Sauvegarde auto en seconde
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: Désactiver la Sauvegarde automatique
+					Tooltip: Activez si vous voulez empêcher la sauvegarde automatique
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: Message des Notifications
+					Tooltip: Activez si vous voulez recevoir un Message lors d'une sauvegarde (console de serveur ou chat)
 				}
 
-				/* Headers.MultiplayerClientConfigInfo:
+				Headers.MultiplayerClientConfigInfo:
 					'''
-					==Multiplayer Client Config Info==
-					Will save the player only in multiplayer
-					''' */
+					==Info de Configuration du Client Multijoueur==
+					Sauvegardera le joueur seulement dans Mode Multijoueur.
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: Autosave will always work in multiplayer for the client
+					Label: Sauvegarde auto active
+					Tooltip: Sauvegarde fonctionnera toujours en Multijoueur pour le Client
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: Intervalle Actuel (heure:minutes:secondes)
+					Tooltip: ""
 				}
 			}
 		}
 
 		Common: {
-			// AutosavedWorld: Autosaved World
-			// AutosavedPlayer: Autosaved Player
-			// AutosavedWorldPlayer: Autosaved World and Player
+			AutosavedWorld: Le Monde a été Auto-Sauvegardé
+			AutosavedPlayer: Le Joueur a été Auto-Sauvegardé
+			AutosavedWorldPlayer: Le Monde et Le Joueur ont été Auto-Sauvegardé
 		}
 	}
 }
