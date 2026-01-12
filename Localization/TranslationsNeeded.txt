@@ -1,7 +1,7 @@
 en-US, 25/25, 100%, missing 0
 de-DE, 25/25, 100%, missing 0
 it-IT, 25/25, 100%, missing 0
-fr-FR, 0/25, 0%, missing 25
+fr-FR, 25/25, 100%, missing 0
 es-ES, 0/25, 0%, missing 25
 ru-RU, 25/25, 100%, missing 0
 zh-Hans, 0/25, 0%, missing 25
