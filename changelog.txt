@@ -1,3 +1,4 @@
 v{ModVersion} has been published to {tMLBuildPurpose} tML v{tMLVersion}. Learn more @ {ModHomepage}
 
-* Added german localization, thanks Lighty!
+* Added french localization, thanks CennacEh and Verveine!
+* Added small mod icon for the configuration menu
