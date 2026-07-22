@@ -29,3 +29,4 @@ List of localization contributors:
 * Italian: **Sea Noodle**
 * German: **Lighty**
 * French: **CennacEh, Verveine**
+* Simplified Chinese: **是梦终空**

@@ -4,6 +4,6 @@ it-IT, 25/25, 100%, missing 0
 fr-FR, 25/25, 100%, missing 0
 es-ES, 0/25, 0%, missing 25
 ru-RU, 25/25, 100%, missing 0
-zh-Hans, 0/25, 0%, missing 25
+zh-Hans, 25/25, 100%, missing 0
 pt-BR, 0/25, 0%, missing 25
 pl-PL, 0/25, 0%, missing 25

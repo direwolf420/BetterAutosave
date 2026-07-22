@@ -1,4 +1,3 @@
 v{ModVersion} has been published to {tMLBuildPurpose} tML v{tMLVersion}. Learn more @ {ModHomepage}
 
-* Added french localization, thanks CennacEh and Verveine!
-* Added small mod icon for the configuration menu
+* Added simplified chinese localization, thanks 是梦终空!
