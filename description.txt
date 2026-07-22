@@ -5,6 +5,8 @@ This mod can be installed on both servers and clients independently, comes with 
 * Multiplayer Client
 They let you customize the autosave interval (Default 10 minutes in singleplayer for world+player, and 5 minutes for player on the client) and also specify one for the server's world! (Vanilla only autosaves once an ingame day)
 
+If your world or player fails to load, see the tModLoader wiki for how to recover them: https://github.com/tModLoader/tModLoader/wiki/Basic-tModLoader-Usage-Guide#world-and-player-backups
+
 Read the homepage for more info.
 
 Notes:

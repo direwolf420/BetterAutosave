@@ -12,6 +12,8 @@ Customize the autosave interval in both single and/or multiplayer!
 
 They let you customize the autosave interval (Default 10 minutes in singleplayer for world+player, and 5 minutes for player on the client) and also specify one for the server's world! (Vanilla only autosaves once an ingame day)
 
+If your world or player fails to load, see the tModLoader wiki for how to recover them: https://github.com/tModLoader/tModLoader/wiki/Basic-tModLoader-Usage-Guide#world-and-player-backups
+
 **Notes:**
 * Only in singleplayer: Requires the "Autosave" setting in the game settings to be turned on
 * The serversided world saving once an ingame day will still happen regardless
