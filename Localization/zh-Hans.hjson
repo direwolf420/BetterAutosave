@@ -2,81 +2,81 @@ Mods: {
 	BetterAutosave: {
 		Configs: {
 			AServerConfig: {
-				// DisplayName: Server+Singleplayer Config
+				DisplayName: 服务器与单人模式配置
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: 自动保存间隔
+					Tooltip: 自动保存的时间间隔（单位：秒）
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: 禁用自动保存
+					Tooltip: 如果你不想自动保存，请启用此选项
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: 通知消息
+					Tooltip: 如果你希望在自动保存时收到通知（控制台或聊天栏），请启用此选项
 				}
 
-				/* Headers.ServerSingleplayerConfigInfo:
+				Headers.ServerSingleplayerConfigInfo:
 					'''
-					==Server+Singleplayer Config Info==
-					Will save the world+player in singleplayer,
-					and only the world in multiplayer
-					''' */
+					==服务器与单人模式配置说明==
+					在单人模式下会保存世界和玩家数据，
+					在多人模式下仅保存世界数据。
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: This mod will always work if enabled on the server. In singleplayer, only if 'Autosave' is enabled in the settings.
+					Label: 自动保存已启用
+					Tooltip: 如果在多人模式启用，自动保存将始终生效。在单人模式下，仅当设置中启用了“自动保存”时才会生效。
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: 当前间隔（时:分:秒）
+					Tooltip: ""
 				}
 			}
 
 			BClientConfig: {
-				// DisplayName: Multiplayer Client Config
+				DisplayName: 多人模式客户端配置
 
 				AutosaveInterval: {
-					// Label: Autosave Interval
-					// Tooltip: Autosave interval in seconds
+					Label: 自动保存间隔
+					Tooltip: 自动保存的时间间隔（单位：秒）
 				}
 
 				AutosaveDisabled: {
-					// Label: Disable Autosave
-					// Tooltip: Switch on if you want to prevent autosaving entirely
+					Label: 禁用自动保存
+					Tooltip: 如果你不想自动保存，请开启此选项
 				}
 
 				Notify: {
-					// Label: Notify Messages
-					// Tooltip: Switch on if you want notification messages when an autosave occurs (server console or chat)
+					Label: 通知消息
+					Tooltip: 如果你希望在自动保存时收到通知（控制台或聊天栏），请开启此选项
 				}
 
-				/* Headers.MultiplayerClientConfigInfo:
+				Headers.MultiplayerClientConfigInfo:
 					'''
-					==Multiplayer Client Config Info==
-					Will save the player only in multiplayer
-					''' */
+					==多人模式客户端配置说明==
+					在多人模式下仅保存玩家数据。
+					'''
 
 				AutosaveStatus: {
-					// Label: Autosave enabled
-					// Tooltip: Autosave will always work in multiplayer for the client
+					Label: 自动保存已启用
+					Tooltip: 在多人模式下，客户端的自动保存将始终生效。
 				}
 
 				CurrentInterval: {
-					// Label: Current Interval (hours:minutes:seconds)
-					// Tooltip: ""
+					Label: 当前间隔（时:分:秒）
+					Tooltip: ""
 				}
 			}
 		}
 
 		Common: {
-			// AutosavedWorld: Autosaved World
-			// AutosavedPlayer: Autosaved Player
-			// AutosavedWorldPlayer: Autosaved World and Player
+			AutosavedWorld: 世界已自动保存
+			AutosavedPlayer: 玩家已自动保存
+			AutosavedWorldPlayer: 世界和玩家已自动保存
 		}
 	}
 }
